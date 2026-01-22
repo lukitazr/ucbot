@@ -1,6 +1,7 @@
 {
   "name": "ucbot-2",
-  "version": "0.0.2",
+  "type": "module",
+  "version": "1.0.0",
   "description": "Bot multifuncional de Discord para El Último Círculo",
   "keywords": [
     "discordjs",
