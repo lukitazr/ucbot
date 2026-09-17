@@ -1,6 +1,5 @@
 import { Message } from 'discord.js';
 import { ExtendedClient } from '../../types';
-import { automod } from '../../utils/funciones';
 import config from '../../../config/config.json';
 
 const { prefix, greetings } = config;
@@ -18,8 +17,6 @@ export = {
 
     // Ignorar bots y mensajes que no sean de servidor o canal de texto
     if (message.author.bot || !message.guild || !message.channel) return;
-
-    automod(client, message);
 
     const content = message.content.trim();
     const isCommand = content.startsWith(prefix);
