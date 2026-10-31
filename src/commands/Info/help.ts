@@ -2,7 +2,7 @@
 import { readdirSync } from 'fs';
 import { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ButtonBuilder, SlashCommandBuilder, Message, ChatInputCommandInteraction, Guild } from 'discord.js';
 import { ExtendedClient, Command } from '../../types';
-import config from '../../../config/config.json';
+import config from '../../config';
 
 const { color } = config;
 
@@ -277,4 +277,4 @@ const command: Command = {
   },
 };
 
-export = command;
+export default command;

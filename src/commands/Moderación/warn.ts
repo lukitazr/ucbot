@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder, ChatInputCommandInteraction, Message } from 'discord.js';
+﻿import { SlashCommandBuilder, EmbedBuilder, ChatInputCommandInteraction, Message } from 'discord.js';
 import { Command, ExtendedClient } from '../../types';
 import { asegurar_todo } from '../../utils/funciones';
 import warnSchema from '../../models/warns';
@@ -102,4 +102,4 @@ const command: Command = {
   },
 };
 
-export = command;
+export default command;

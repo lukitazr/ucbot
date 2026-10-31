@@ -1,11 +1,10 @@
 import { Client, Collection, Message, ChatInputCommandInteraction, SlashCommandBuilder, SlashCommandOptionsOnlyBuilder, SlashCommandSubcommandsOnlyBuilder } from 'discord.js';
-import { Manager } from 'moonlink.js';
 import { GiveawaysManager } from 'discord-giveaways';
 
 export interface ExtendedClient extends Client {
   commands: Collection<string, Command>;
   aliases: Collection<string, string>;
-  manager: Manager;
+  manager?: any;
   giveawaysManager: GiveawaysManager;
   color: string;
 }
@@ -36,7 +35,7 @@ export interface LavalinkConfig {
 
 export interface BotConfig {
   token: string;
-  lavalink: LavalinkConfig;
+  lavalink?: LavalinkConfig;
   color?: string;
   mongodb?: string;
 }

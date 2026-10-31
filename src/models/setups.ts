@@ -11,6 +11,7 @@ export interface ISetup extends Document {
   torneo: {
     canal: string;
   };
+  basurero?: string;
 }
 
 const setupSchema = new Schema<ISetup>({
@@ -25,6 +26,7 @@ const setupSchema = new Schema<ISetup>({
     type: Object,
     default: { canal: '' }
   },
+  basurero: { type: String, default: '' },
 });
 
 const model = mongoose.model<ISetup>('Configuraciones', setupSchema);

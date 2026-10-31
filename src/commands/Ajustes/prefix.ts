@@ -1,4 +1,4 @@
-import { ChatInputCommandInteraction, Message, SlashCommandBuilder } from 'discord.js';
+﻿import { ChatInputCommandInteraction, Message, SlashCommandBuilder } from 'discord.js';
 import schema from '../../models/servidor';
 import { Command, ExtendedClient } from '../../types';
 
@@ -40,4 +40,4 @@ const command: Command = {
   }
 };
 
-export = command;
+export default command;

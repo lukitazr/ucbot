@@ -1,13 +1,13 @@
 import { REST, Routes, ActivityType, PresenceUpdateStatus } from 'discord.js';
 import mongoose from 'mongoose';
 import { ExtendedClient } from '../../types';
-import config from '../../../config/config.json';
+import config from '../../config';
 import 'colors';
 
 const { token, mongodb } = config;
 const palo = 53;
 
-export = {
+export default {
   name: 'clientReady',
   once: true,
   run: (client: ExtendedClient): void => {
@@ -31,12 +31,6 @@ export = {
 
     client.user!.setActivity('twitch.tv/elultimocirculo', { type: ActivityType.Streaming });
     client.user!.setStatus(PresenceUpdateStatus.Idle);
-
-    if (config.lavalink.active) {
-      console.log('🔄 Iniciando MoonLink Manager...'.yellow);
-      client.manager.init(client.user!.id);
-      console.log('✅ MoonLink Manager iniciado con éxito.'.green);
-    }
 
     const commandsArray = Array.from(client.commands.values())
       .filter(cmd => cmd.slashBuilder)

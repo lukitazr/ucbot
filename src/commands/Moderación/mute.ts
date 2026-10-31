@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder, ChatInputCommandInteraction, Message } from 'discord.js';
+﻿import { SlashCommandBuilder, EmbedBuilder, ChatInputCommandInteraction, Message } from 'discord.js';
 import { Command, ExtendedClient } from '../../types';
 const command: Command = {
   name: 'mute',
@@ -107,4 +107,4 @@ const command: Command = {
   },
 };
 
-export = command;
+export default command;

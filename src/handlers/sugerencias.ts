@@ -1,5 +1,5 @@
 import { Client, Message, EmbedBuilder, ActionRowBuilder, ButtonBuilder, Interaction, ButtonInteraction, TextChannel } from 'discord.js';
-import { logs } from '../../config/config.json';
+import { logs } from '../config';
 import setupSchema from '../models/setups';
 import votosSchema from '../models/votos-sugs';
 import { asegurar_todo } from '../utils/funciones';

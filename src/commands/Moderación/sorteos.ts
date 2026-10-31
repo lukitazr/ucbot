@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder, TextChannel, ChatInputCommandInteraction, Message } from 'discord.js';
+﻿import { SlashCommandBuilder, EmbedBuilder, TextChannel, ChatInputCommandInteraction, Message } from 'discord.js';
 import { Command, ExtendedClient } from '../../types';
 import ms from 'ms';
 
@@ -112,4 +112,4 @@ const command: Command = {
   },
 };
 
-export = command;
+export default command;

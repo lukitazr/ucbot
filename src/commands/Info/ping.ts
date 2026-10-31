@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, Message, ChatInputCommandInteraction } from 'discord.js';
+﻿import { SlashCommandBuilder, Message, ChatInputCommandInteraction } from 'discord.js';
 import { ExtendedClient, Command } from '../../types';
 
 const command: Command = {
@@ -29,4 +29,4 @@ const command: Command = {
   },
 };
 
-export = command;
+export default command;

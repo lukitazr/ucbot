@@ -1,10 +1,10 @@
 import { Message } from 'discord.js';
 import { ExtendedClient } from '../../types';
-import config from '../../../config/config.json';
+import config from '../../config';
 
 const { prefix, greetings } = config;
 
-export = {
+export default {
   name: 'messageCreate',
   /**
    * @param client Instancia del cliente de Discord

@@ -1,10 +1,10 @@
 import { ChatInputCommandInteraction, GuildMember } from 'discord.js';
 import { ExtendedClient } from '../../types';
-import config from '../../../config/config.json';
+import config from '../../config';
 
 const { prefix } = config;
 
-export = {
+export default {
   name: 'interactionCreate',
   run: async (client: ExtendedClient, interaction: ChatInputCommandInteraction): Promise<void> => {
     if (!interaction.isCommand()) return;
