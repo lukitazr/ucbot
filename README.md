@@ -32,7 +32,6 @@ Versión serverless de **ucbot** diseñada exclusivamente para ejecutarse en **V
 | `/warnings [usuario]` | Moderación | Consulta el historial de advertencias de un usuario | Ninguno |
 | `/leaderboard-warns` | Moderación | Top 10 de usuarios con mayor cantidad de advertencias | Ninguno |
 | `/leaderboard-warners` | Moderación | Top 10 de moderadores con más advertencias emitidas | Ninguno |
-| `/setup-basurero [canal] [desactivar]` | Setup | Configura el canal trampa (honeypot) anti-cuentas hackeadas | `Administrator` |
 
 ---
 
@@ -104,12 +103,11 @@ Luego copia la URL generada (`https://.../api/interactions`) y colócala en el c
 ├── src/
 │   ├── commands/             # Comandos modulares por categoría
 │   │   ├── Info/
-│   │   ├── Moderacion/
-│   │   └── Setup/
+│   │   └── Moderacion/
 │   ├── config/               # Carga y validación de variables de entorno
 │   ├── handlers/             # Despachador de interacciones y permisos
 │   ├── lib/                  # Conexión Mongoose singleton y Discord REST
-│   ├── models/               # Modelos Mongoose (warns, setups)
+│   ├── models/               # Modelos Mongoose (warns)
 │   ├── types/                # Definiciones de TypeScript
 │   ├── dev-server.ts         # Servidor HTTP local para testing
 │   └── index.ts              # Entrypoint de desarrollo local

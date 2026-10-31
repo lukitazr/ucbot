@@ -25,3 +25,4 @@ export async function connectDB(): Promise<typeof mongoose | null> {
 }
 
 export default connectDB;
+

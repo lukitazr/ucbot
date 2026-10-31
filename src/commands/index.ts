@@ -13,8 +13,6 @@ import warnings from './Moderacion/warnings';
 import leaderboardWarns from './Moderacion/leaderboard-warns';
 import leaderboardWarners from './Moderacion/leaderboard-warners';
 
-import setupBasurero from './Setup/setup-basurero';
-
 export const commandsList: SlashCommand[] = [
   ping,
   help,
@@ -27,7 +25,6 @@ export const commandsList: SlashCommand[] = [
   warnings,
   leaderboardWarns,
   leaderboardWarners,
-  setupBasurero,
 ];
 
 export const commandsMap = new Map<string, SlashCommand>();
