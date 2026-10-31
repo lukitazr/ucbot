@@ -1,32 +1,36 @@
 {
-  "name": "ucbot-2",
+  "name": "ucbot-interactions",
   "type": "module",
-  "version": "1.0.0",
-  "description": "Bot multifuncional de Discord para El Último Círculo",
+  "version": "2.0.0",
+  "description": "Bot serverless de Discord para Vercel basado en HTTP Interactions y Slash Commands",
   "keywords": [
     "discordjs",
-    "typescript",
-    "node",
-    "IA"
+    "discord-interactions",
+    "slash-commands",
+    "serverless",
+    "vercel",
+    "typescript"
   ],
-  "homepage": "https://github.com/lukitaz-r/ucbot-2#readme",
+  "homepage": "https://github.com/lukitazr/ucbot#readme",
   "bugs": {
-    "url": "https://github.com/lukitaz-r/ucbot-2/issues"
+    "url": "https://github.com/lukitazr/ucbot/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lukitaz-r/ucbot-2.git"
+    "url": "git+https://github.com/lukitazr/ucbot.git"
   },
   "license": "MIT",
   "author": "Luca Ramirez (lukitaz_r)",
-  "main": "src/index.ts",
+  "main": "api/interactions.ts",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "dev": "bun src/dev-server.ts",
+    "start": "bun src/dev-server.ts",
+    "deploy-commands": "bun scripts/deploy-commands.ts",
+    "build": "tsc --noEmit"
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "discord-giveaways": "^6.0.1",
-    "discord-html-transcripts": "^3.2.0",
+    "discord-interactions": "^4.4.0",
     "discord.js": "^14.22.1",
     "dotenv": "^18.0.6",
     "mongoose": "^8.18.1",

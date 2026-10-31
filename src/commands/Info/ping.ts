@@ -1,31 +1,25 @@
-﻿import { SlashCommandBuilder, Message, ChatInputCommandInteraction } from 'discord.js';
-import { ExtendedClient, Command } from '../../types';
+import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import { SlashCommand, SlashContext } from '../../types';
 
-const command: Command = {
-  name: 'ping',
-  aliases: ['latencia', 'ms'],
-  desc: 'Sirve para ver la latencia del Bot',
-  slashBuilder: new SlashCommandBuilder()
+const command: SlashCommand = {
+  data: new SlashCommandBuilder()
     .setName('ping')
-    .setDescription('❓¡Vea la latencia del Bot!'),
-  /**
-   * Ejecuta el comando ping.
-   * @param client Instancia del cliente de Discord
-   * @param message Mensaje que invocó el comando
-   * @param _args Argumentos del comando
-   * @param _prefix Prefijo utilizado
-   * @param interaction Interacción de slash command
-   */
-  async run(
-    client: ExtendedClient,
-    message: Message | null,
-    _args: string[],
-    _prefix: string,
-    interaction: ChatInputCommandInteraction | null,
-  ): Promise<void> {
-    const latency = Math.round(client.ws.ping);
-    if (interaction) await interaction.reply(`Pong! El ping del Bot es de \`${latency}ms\``);
-    if (message) await message.reply(`Pong! El ping del Bot es de \`${latency}ms\``);
+    .setDescription('❓ ¡Vea la latencia y estado del Bot en Vercel!'),
+  category: 'Info',
+  run: (ctx: SlashContext) => {
+    const latency = Date.now() - ctx.receivedAt;
+
+    const embed = new EmbedBuilder()
+      .setTitle('🏓 ¡Pong!')
+      .setDescription(
+        `⚡ **Modo:** Vercel Serverless (HTTP Interactions)\n` +
+        `⏱️ **Tiempo de respuesta:** \`${latency}ms\`\n` +
+        `🌐 **WebSockets:** Deshabilitados (0 Gateway / 0 Intents)`
+      )
+      .setColor(ctx.color as any)
+      .setTimestamp();
+
+    return ctx.reply({ embeds: [embed] });
   },
 };
 

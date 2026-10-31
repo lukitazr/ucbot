@@ -5,15 +5,13 @@
     "lib": [
       "ES2022"
     ],
-    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
     "sourceMap": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -22,8 +20,8 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
@@ -32,9 +30,11 @@
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "api/**/*",
+    "scripts/**/*"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }
